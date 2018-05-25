@@ -1,0 +1,405 @@
+
+/*-------------------------------------------------*/
+/*      PHONE                                    */
+/*-------------------------------------------------*/
+
+@media all and (min-width: 425px){
+    
+    header .motto{    
+        font-size: 50px;
+        line-height: 50px;
+    }
+    
+    .top-navigation button{
+        width: 160px;
+    }
+    
+    .popup .container .bottom button{
+        float: right;
+        width: 160px;
+    }
+    
+    .popup .container .bottom::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+}
+
+
+
+/*-------------------------------------------------*/
+/*      TABLET                                    */
+/*-------------------------------------------------*/
+
+@media all and (min-width: 768px){
+    
+    .container{
+        padding: 0 8%;
+    }
+    
+    h3{
+        text-align: left;
+    }
+
+    header .motto{    
+        font-size: 60px;
+        line-height: 60px;
+    }
+    
+    header .overlay{
+        display: none;
+    }
+    
+    .top-navigation a.user-action{
+        clear: none;
+        margin: 35px 20px 0 0;
+    }
+    
+    .top-navigation .logo{
+        width: 160px;
+    }
+    
+/*-------------------------------------------------*/
+/*      FORMS                                    */
+    
+    
+    .free-report .form-container{
+        position: relative;
+        margin-top: -60px;
+        width: 100%;
+        height: 340px;
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 40px 5%;
+    }
+    
+    .free-report form,
+    .popup form{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .free-report form .component,
+    .popup form .component{
+        width: calc(50% - 10px);
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .popup form .component{
+        margin-top: 40px;
+    }
+    
+    .free-report form .component.full,
+    .popup form .component.full{
+        width: 100%;
+    }
+    
+    .free-report form .component.half,
+    .popup form .component.half{
+        width: calc(25% - 10px);
+    }
+    
+    .free-report form .component.one-third,
+    .popup form .component.one-third{
+        width: calc(16.6% - 10px);
+    }
+    
+    .free-report form .component.two-third,
+    .popup form .component.two-third{
+        width: calc(33.3% - 10px);
+    }
+    
+    input,
+    select{
+        width: 100%;
+    }
+    
+    input.half,
+    select.half{
+        width: calc(50% - 10px);
+    }
+    
+    input.one-third,
+    select.one-third{
+        width: calc(33.3% - 13px);
+    }
+    
+    form label{
+        margin-top: 0px;
+    }
+    
+    
+/*-------------------------------------------------*/
+/*     LEARNING CENTER                             */
+    
+
+    .learning-center .characters{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    
+    .learning-center .characters div{
+        width: 23%;
+    }
+
+    .learning-center .characters video{
+        width: 100%;
+        margin-left: -30%;
+    }
+    
+/*-------------------------------------------------*/
+/*     NEWSLETTER                             */
+    
+    
+    .newsletter .container{
+        padding: 0 16%;
+    }
+    
+    .newsletter .primary-button{
+        width: 160px;
+    }
+    
+    .newsletter .primary-button span{
+        display: inline;
+    }
+    
+    .newsletter input{
+        width: calc(100% - 160px);
+    }
+    
+    
+/*-------------------------------------------------*/
+/*     WHY SATURN                             */
+    
+    
+    .why-saturn .container{
+        padding: 0 16%;
+    }
+    
+    .why-saturn .saturn{
+        width: 190px;
+        float: left;
+    }
+        
+    .why-saturn .text{
+        float: left;
+        width: calc(100% - 200px);
+    }
+    
+    .why-saturn .text h2{
+        margin-top: 0px;
+    }
+    
+    .why-saturn::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    
+/*-------------------------------------------------*/
+/*     HOW IT WORKS                             */
+    
+    .how-it-works .offers div{
+        width: 50%;
+    }    
+    
+    .how-it-works .offers div{
+        width: 25%;
+    }
+    
+    .how-it-works .subscription{
+        float: left;
+        width: 45%;
+    }
+    
+    .how-it-works .reading{
+        float: right;
+        width: 45%;
+    }
+    
+    .how-it-works::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    ul.price-list li .value{
+        width: 80px;
+    }
+    
+    
+    
+/*-------------------------------------------------*/
+/*     ABOUT                                      */
+
+    
+    .about .photo{
+        float: left;
+        width: 260px;
+        height: 260px;
+        margin-right: 100px;
+    }
+    
+    .about .text{
+        float: left;
+        width: calc(100% - 360px);
+    }
+    
+    .about::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    
+    
+    
+/*-------------------------------------------------*/
+/*     FOOTER                                      */
+    
+    
+    footer nav{
+        clear: both;
+    }
+    
+    footer nav a{
+        display: inline-block;
+        margin-left: 30px;
+        margin-bottom: 0;
+    }
+    
+    footer small{
+        float: left;
+        clear: left;
+    }
+    
+    
+    
+    
+/*-------------------------------------------------*/
+/*     POPUP                                      */
+    
+    
+ 
+.popup .container{
+    height: auto;
+    width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}    
+    
+.popup.reading.form .container{
+    width: 750px;
+    padding: 0px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup.reading.form{
+    overflow: auto;
+}
+    
+.popup.join-newsletter.form input,
+.popup.reading.form #reading-email{
+    float: left;
+    width: calc(100% - 120px);
+}
+    
+.popup.join-newsletter.form button,
+.popup.reading.form button.cta{
+    float: left;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    width: 120px;
+    margin-top: 0px;
+}    
+    
+  
+    
+/*-------------------------------------------------*/
+/*     LOGIN REGISTER                                      */
+    
+    
+section.login-register .container   {
+    width: 650px;
+    position: relative;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  
+section.login-register form input[type="submit"]{
+    width: 160px;
+    float: right;
+}
+    
+section.login-register form::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+/*-------------------------------------------------*/
+/*      LAPTOP                                    */
+/*-------------------------------------------------*/
+
+@media all and (min-width: 1200px){
+    
+    .container{
+        width: 1110px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+    }
+    
+    .newsletter .container{
+        width: 730px;
+        padding: 0px;
+    }
+    
+    .why-saturn .container{
+        padding: 0;
+    }
+    
+    .why-saturn .saturn{
+        width: 190px;
+    }
+    
+    .why-saturn .text{
+        width: 730px;
+    }
+    
+    ul.price-list li .value{
+        width: 150px;
+    }
+    
+    .how-it-works .subscription,
+    .how-it-works .reading{
+        width: 40%;
+    }
+}

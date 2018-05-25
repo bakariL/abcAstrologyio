@@ -1,0 +1,1252 @@
+/*
+Theme Name: Mr. Tailor
+Theme URI: http://www.getbowtied.com/
+Author: Get Bowtied
+Author URI: http://www.getbowtied.com/
+Description: Mr. Tailor is premium WordPress and WooCommerce theme that will help you tell your story and sell your products online.
+Version: 2.6.8
+License:
+License URI:
+Text Domain: mr_tailor
+Domain Path: /languages/
+*/
+
+html,
+body{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    font-family: museo-sans, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #fff4e0;
+      margin: 0px;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #4d4d4d;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) + .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked + .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+/*-------------------------------------------------*/
+/*      GENERAL                                    */
+/*-------------------------------------------------*/
+
+.yeah{
+	margin-top: 5% !important;
+	margin-left: 2% !important;
+}
+
+.primary-button,
+.secondary-button,
+input[type="submit"]{
+    width: 160px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    font-family: museo-sans-rounded, sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(#e13481, #ae20d0);
+    cursor: pointer;
+}
+
+.primary-button:hover,
+input[type="submit"]:hover{    
+    background: linear-gradient(#f24c96, #e13481);
+}
+
+.primary-button.loading{
+    background: url(assets/spinner.gif) no-repeat center;  
+    font-size: 0px;
+    pointer-events: none;
+    outline: none;
+}
+
+.secondary-button{
+    background: #fff;
+    color: #000;
+}
+
+.secondary-button:hover{
+    background-color: #f24c96;
+    color: #fff;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 24px;
+}
+
+a{
+    color: #0054ff;
+}
+
+a:hover{
+    color: #e13481;
+}
+
+h1{
+    font-family: 'museo-sans-rounded', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: #403c50;
+    margin: 0;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+h3{
+    font-family: "matt-b", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+}
+
+h1 span{
+    font-weight: 300;
+}
+
+section{
+    padding: 100px 0px;
+}
+
+body.unscrollable{
+    height: 100%;
+    overflow: hidden;
+}
+
+/*-------------------------------------------------*/
+/*      HEADER                                     */
+/*-------------------------------------------------*/
+
+header{
+    position: relative;
+    height: 90%;
+    width: 100%;
+    padding-top: 20px;
+    color: #fff;
+    background: #403c50;
+    overflow: hidden;
+    background-image: url(assets/star-pattern.jpg);
+    background-repeat: repeat;
+}
+
+header video {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+}
+
+header .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    background-color: #403b50;
+    opacity: 0.5;
+}
+
+.top-navigation .logo{
+    width: 140px;
+    float: left;
+    margin-bottom: auto; 
+    height: 90vh;
+}
+
+.top-navigation a.user-action{
+    float: right;
+    clear: right;
+    color: #fff;
+    text-decoration: none;
+    margin: 20px 20px 0 0;
+}
+
+.top-navigation a:hover{
+    text-decoration: underline;
+}
+
+.top-navigation button{
+    float: right;
+    margin-top: 20px;
+    width: 140px;
+}
+
+.top-navigation::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header .motto{    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'museo-sans-rounded', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+header.short{
+    height: 250px;
+}
+
+.content-area{
+	
+	padding-top: 0px !important;
+}
+
+.top-headers-wrapper{
+	
+	height: 3em;
+}
+
+
+.main-navigation a{
+	background-color: fuchsia;
+	margin-bottom: 1em;
+	
+}
+
+.main-navigation img{
+	background-color: fuchsia;
+	margin-bottom: 2em;
+	
+}
+
+.dd{
+	width: 20% !important;
+}
+
+#report-birthday{
+	width: 15% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+#report-birthmonth{
+	
+	padding: 0 !important;
+	width: 25% !important;
+	margin: 0 !important;
+}
+
+#report-birthyear{
+	width: 20% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+#report-gender{
+	width: 20% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.component d{
+	display: flex !important;
+}
+
+/*-------------------------------------------------*/
+/*      FREE REPORT                                */
+/*-------------------------------------------------*/
+
+
+/*
+.Eml{
+	width: 80% !important;
+}
+
+.fn{
+	
+width: 35% !important;
+}
+
+.ln{
+	width: 35% !important;
+}
+
+#freeR{
+	width: 40%;
+}
+
+
+.free-report{
+    background-color:#FFF4E1 !important;
+}
+
+#report-lastname{
+	
+	margin-left: 1em;
+	
+}
+
+
+.one-third{
+	display: flex !important;
+	justify-content: flex-end !important;
+	width: 30% !important;
+	
+}
+#flabel{
+	padding-left: 1em;
+	width: 20%;
+}
+
+#nlabel{
+	
+}
+
+#elabel{
+	margin-right: 0;
+}
+
+#ffhead{
+	font-family: sans-serif;
+	
+}
+
+.free-report .form-container,
+.popup .form-container{
+    position: relative;
+    margin-top: -9.5em;
+    margin-left: 8em;
+    width: 80%;
+    border-radius: 2%;
+    background-color: #FFF;
+    padding: 1.5em;
+}
+
+.zz{
+	    box-shadow: 0px 3px 5px 2px #888888 !important;
+	    padding: 2em !important;
+
+}
+
+.free-report form .component,
+.popup form .component{
+    width: 95%;
+    padding-right:  1em;
+    margin-top: 1em;
+    display: inline-flex;
+    justify-content: center; 
+    
+}
+
+.free-report .form-container .primary-button,
+.popup .form-container .primary-button{
+    float: right;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.free-report .form-container::after,
+.popup .form-container::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+*/
+
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/*-------------------------------------------------*/
+/*      FORMS                                    */
+/*-------------------------------------------------*/
+
+form label{
+    display: inline-block;
+    width: 40%;
+    line-height: 16px;
+    margin-top: 15px;
+}
+
+#flabel{
+	margin-right: 1em;
+	
+}
+
+#blabel{
+	font-size: x-small;
+	margin-left: 2px;
+	
+}
+
+form input,
+form select,
+form textarea{
+    width: 100%;
+    height: 40px;
+    font-family: 'museo-sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #403c50;
+    border: none;
+    border-bottom: 2px solid #f5b845;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 0px;
+}
+
+form textarea{
+    height: 100px;
+}
+
+form select{
+    cursor: pointer;
+}
+
+form input::-webkit-input-placeholder{ 
+    color: #b2b2b2;
+    font-weight: 300;
+}
+form input::-moz-placeholder{ 
+    color: #b2b2b2;
+    font-weight: 300;
+}
+form input:-ms-input-placeholder{ 
+    color: #b2b2b2;
+    font-weight: 300;
+}
+form input:-moz-placeholder { 
+    color: #b2b2b2;
+    font-weight: 300;
+}
+
+form input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.form input.inline,
+.form select.inline{
+    float: left;
+    width: calc(100% - 160px);
+    height: 50px;
+}
+
+input.error,
+select.error,
+textarea.error{
+    background-color: #ffdfdf !important;
+}
+
+span.input-error{
+    font-size: 12px;
+    color: #e94745;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.form .primary-button.inline{
+    float: left;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    width: 120px;
+    margin-top: 10px;
+}
+
+
+/*-------------------------------------------------*/
+/*     LEARNING CENTER                             */
+/*-------------------------------------------------*/
+
+.shedr{
+	
+}
+
+#signsHEAder{
+	font-weight: 500;
+	width: 12%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.learning-center{
+    background-color:#FFF4E1 !important;
+}
+
+#symb{
+	margin-right: 10em;
+	width: 50%;
+}
+
+.signsLC ul{
+	display: inline-flex;
+	flex-direction: column;
+ 
+}
+
+.descElements{
+	display: flex !important;
+	margin-top: 3em;
+	padding: 1em;
+}
+
+.descElements p{
+	padding: 1em;
+	margin-left: 3px;
+}
+
+.vid .fire{
+	margin: 0px !important;
+	display: flex;
+	justify-content: space-around;
+	margin-left: 1em;
+	margin-bottom: 0px !important;
+}
+
+.learning-center h1{
+    text-align: center;
+}
+
+.learning-center .characters div{
+    max-width: 100%;
+    min-width: 25%;
+    margin-top: 50px;
+    margin-left: 1em;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px !important;
+    
+}
+
+.learning-center .characters video{
+    width: 25%;
+    margin-left: 0.5%;
+}
+
+.learning-center .characters ul{
+    list-style: none;
+    padding: 0px;
+}
+
+.learning-center .characters ul li{
+    height: 35px;
+    float: right;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+.learning-center .characters ul li img{
+    width: 30px;
+    height: 30px;
+    margin: 5px 10px 0 0;
+}
+
+.learning-center .characters p{
+    line-height: 24px;
+}
+
+
+/*-------------------------------------------------*/
+/*    NEWSLETTER                                   */
+/*-------------------------------------------------*/
+
+#nwsltrhd{
+	text-align: center;
+	padding-bottom: 1em;
+	font-family: sans-serif;
+	font-weight: 700;
+}
+
+
+.nws{
+	width: 30% !important;
+}
+
+.ee{
+	width: 90%!important;
+}
+
+.frmnws{
+	display: inline-flex !important;
+}
+
+.newsletter{
+    background: #fff;
+}
+
+.newsletter h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.newsletter input{
+    display: flex;
+    width: 60vw;
+    margin-left: 10em;
+    height: 50px;
+    border-bottom: 2px inset #F4B750;
+    box-shadow: 0px 1px 8px #b8b8b8;
+}
+
+.newsletter .primary-button{
+	display: flex;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    box-shadow: 0px 1px 8px #b8b8b8;
+    width: 20%;
+}
+
+.newsletter .primary-button span{
+    
+}
+
+.newsletter form::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/*-------------------------------------------------*/
+/*    WHY SATURN                                   */
+/*-------------------------------------------------*/
+
+.why-saturn{
+    background: #fff;
+    padding-top: 0px;
+}
+
+.why-saturn .saturn img{
+    width: 120px;
+}
+
+.why-saturn .text .more,
+.why-saturn .text .show-less,
+.why-saturn .text.expanded .read-more{
+    display: none;
+}
+
+.why-saturn .text.expanded .more,
+.why-saturn .text.expanded .show-less{
+    display: block;
+}
+
+.why-saturn .container{
+	display: flex;
+	justify-content: space-between;
+}
+
+.why-saturn .container img{
+	margin-right: 3em;
+}
+
+.why-saturn .container p {
+	padding-left: 2em;
+	margin-top: 1em;
+}
+
+#satReportHead{
+	margin-right: 2;
+}
+
+/*-------------------------------------------------*/
+/*    HOW IT WORKS                                   */
+/*-------------------------------------------------*/
+
+.text-howItWorks{
+	display: flex;
+	justify-content: center;
+	justify-content: space-between;
+	padding: 1.5em;
+}
+
+.offers{
+	display: flex;
+	padding: 1em; 
+}
+
+.offers p{
+	margin-top: 18em;
+	display: flex;
+	justify-content: space-around;
+}
+
+.how-it-works{
+    background: #fff;
+    border-top: 2px solid #daddec;
+}
+
+.how-it-works h1{
+    text-align: center;
+}
+
+.how-it-works .offers h2{
+    font-weight: 700;
+}
+
+.how-it-works .offers{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.how-it-works .offers div{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.how-it-works .offers img{
+	display: flex;
+    width: 15%;
+}
+
+
+
+.how-it-works .subscription,
+.how-it-works .reading{
+    margin-top: 100px;
+}
+
+ul.price-list{
+    padding: 0;
+    list-style: none;
+}
+
+ul.price-list li{
+    height: 40px;
+    border-bottom: 1px solid #fed545;
+    padding-top: 8px;
+}
+
+ul.price-list li:last-child{
+    border: 0px;
+}
+
+ul.price-list li .label{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+ul.price-list li .value{
+    float: right;
+    text-align: right;
+    width: 100px;
+}
+
+ul.price-list li .description{
+    float: right;
+}
+
+ul.price-list + .info{
+    margin: -10px 0 20px 0;
+}
+
+.priceList{
+	
+	display: flex !important;
+	justify-content: space-around !important;
+}
+
+.buyNow button{
+	margin-top: 3%;
+	background-color: #fff !important;
+}
+.button{
+			background-color: #30b0ff !important;
+			border-radius: 2% !important;
+			border: 1px outset #777777 !important;
+			box-shadow: 1px 9px 10px 8px #aaaaaa !important;
+			padding: 1em !important;
+			font-family: sans-serif;
+} 
+
+.product{
+	margin-left: 20% !important;
+	margin-top: 1em !important;
+}
+
+
+#hdsub{
+	background-color: #D8378A;
+}
+/*-------------------------------------------------*/
+/*    ABOUT                                   */
+/*-------------------------------------------------*/
+
+
+.card {
+  min-width: 75%;
+  max-width: 90%;
+  height: 25%;
+  margin: 50px auto;
+  box-shadow: 10px ;
+  box-sizing: border-box;
+  cursor:default;
+  box-shadow: 10px 10px 22px -2px rgba(194,194,194,0.72);
+  border-radius: 5px;
+}
+
+.card-title {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  transition: 150ms all linear;
+}
+
+.card-title h1 {
+  padding: 20px 10px;
+  margin: 0;
+}
+
+.card-text {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.card-text-off {
+  color: lightgray;
+}
+
+
+
+.about{
+    background: #daddec;
+}
+
+/*
+.about .photo{
+    height: 200px;
+    width: 100%;
+    background-image: url(/assets/logo-symbol.svassets/logo.svgg);
+}
+*/
+
+.about .text{
+    margin-top: 40px;
+    line-height: 24px;
+}
+
+
+/*-------------------------------------------------*/
+/*    FOOTER                                   */
+/*-------------------------------------------------*/
+
+footer{
+    background-color: #403c50;
+    padding: 40px 0;
+}
+
+footer .container::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+footer .logo{
+    height: 50px;
+    margin-bottom: 30px;
+    float: left;
+}
+
+footer nav{
+    float: right;
+}
+
+footer nav a{
+    display: list-item;
+    list-style: none;
+    text-align: right;
+    margin-bottom: 40px;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer nav a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer small{
+    color: #b1b0b5;
+    clear: both;
+    float: right;
+}
+
+
+/*-------------------------------------------------*/
+/*    POPUP                                   */
+/*-------------------------------------------------*/
+
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(64,60,80,0.7);
+    display: none;
+}
+
+.popup .container{
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.popup .container .top{
+    height: 60px;
+    width: 100%;
+    padding: 24px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #403c50;
+}
+
+.popup.success .container .top{
+    background-color: #60c2a6;
+}
+
+.popup.error .container .top{
+    background-color: #e94745;
+}
+
+.popup .container .top img.cover{
+    height: 160px;
+    margin-top: -80px;
+}
+
+.popup .container .top div.close{
+    float: right;
+    width: 30px;
+    margin-top: -7px;
+    cursor: pointer;
+}
+
+.popup .container .bottom{
+    position: relative;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 24px 24px 60px 24px;
+}
+
+.popup .container .bottom h1 img{    
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.popup .container .bottom h1 span{
+    font-weight: 300;
+}
+
+.popup .container .bottom p{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.popup .container .bottom button{
+    width: 100%;
+}
+
+.popup.join-newsletter.form input,
+.popup.reading.form #reading-email{
+    width: 100%;
+}
+
+.popup.join-newsletter.form button,
+.popup.reading.form button.cta{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.popup.join-newsletter.form form::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.popup.reading.form{
+    overflow: scroll;
+}
+
+.popup.reading.form .container{
+    transform: none;
+    top: 60px;
+}
+
+.popup.reading.form .form-container{
+    padding: 0;
+    background: none;
+    margin-top: 0;
+}
+
+.popup.contact.form .cta{
+    float: right;
+    margin-top: 20px;
+}
+
+
+/*-------------------------------------------------*/
+/*      LOGIN REGISTER                             */
+/*-------------------------------------------------*/
+
+section.login-register{
+    padding: 0px 24px 24px 24px;
+    position: relative;
+    height: auto;
+}
+
+section.login-register .container{
+    position: relative;
+    margin-top: -60px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 24px;
+}
+
+section.login-register form input[type="submit"]{
+    width: 100%;
+}
+
+section.login-register form label{
+    margin-top: 20px;
+}
+
+
+/*-------------------------------------------------*/
+/*     REPORTS                             */
+/*-------------------------------------------------*/
+
+section.select-report,
+section.view-report,
+section.account-reports{
+    padding: 0;
+}
+
+section.account-reports{
+    padding-bottom: 100px;
+}
+
+section.select-report .container,
+section.view-report .container,
+section.account-reports .container{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    margin-top: -60px;
+}
+
+section.account-reports .container:not(:first-child){
+    margin-top: 30px;
+}
+
+section.select-report .form::after,
+section.account-reports .form::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section.view-report-signup.login-register .container{
+    margin-top: 60px;
+}
+
+section.view-report-signup.login-register form .cta{
+    float: right;
+    margin-top: 24px;
+}
+
+section.view-report-signup.login-register form::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
